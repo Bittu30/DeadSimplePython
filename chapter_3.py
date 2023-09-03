@@ -144,8 +144,69 @@ def tell_joke(joke_type):
 
 print(tell_joke("funny"))
 
+
 # Classes and Objects
 
 class Joke:
+    pass
 
+
+import sys
+
+print(sys.path)
+
+# The immutable truth
+
+eggs = 12
+carton = eggs
+print(eggs is carton)
+eggs += 1
+print(eggs is carton)
+print(eggs)
+print(carton)
+
+temps = [87, 76, 79]
+
+highs = temps
+print(temps is highs)
+temps += [81]
+print(temps is highs)
+print(highs)
+print(temps)
+
+
+# passing by assignment
+def greet(person):
+    print(f"Hello, {person}.")
+
+
+my_name = "Jason"
+greet(my_name)
+
+
+# this func has side effects
+def find_lowest(temp):
+    temp.sort()
+    print(temp[0])
+
+
+temps = [85, 76, 79, 72, 81]
+find_lowest(temps)
+print(temps)
+
+# coercion and conversion
+
+print(42.5)
+x = 5 + 1.5
+y = 5 + True
+
+life_universe_everything = "42"
+
+answer = float(life_universe_everything)
+
+print(type(answer))
+
+print(answer)
+
+# collection and References
 
